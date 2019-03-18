@@ -13,8 +13,8 @@
 
         <a-modal :title="name" v-model="visible" :footer="null">
             <div class="modal">
-                <img :alt="name" :src="logo" slot="cover"/>
                 <a-card>
+                    <img :alt="name" :src="logo" slot="cover"/>
                     <a-icon type="link"/>
                     <a :href="url" target="_blank" class="modal-url">
                         {{url}}

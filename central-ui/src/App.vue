@@ -13,7 +13,13 @@
                         <span>Home</span>
                     </router-link>
                 </a-menu-item>
-                <a-menu-item key="2">
+                <a-menu-item key="2" style="float: right">
+                    <router-link :to="{name:'create'}">
+                        <a-icon type="plus-circle"/>
+                        <span>New Application</span>
+                    </router-link>
+                </a-menu-item>
+                <a-menu-item key="3">
                     <router-link :to="{name:'about'}">
                         <a-icon type="info-circle"/>
                         <span>About</span>

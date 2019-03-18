@@ -4,5 +4,14 @@ services:
   web:
     build: .
     command: sh run.sh
+    env_file:
+      - .env
+    volumes:
+      - data:/app/data
+      - uploads:/app/static/uploads
     ports:
       - 5000:5000
+
+volumes:
+  data: {}
+  uploads: {}

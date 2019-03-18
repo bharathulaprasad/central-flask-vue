@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="m-wrapper">
         <a-row type="flex" justify="space-around" align="middle">
             <a-col :span="8">
                 <div class="forbidden">
@@ -26,7 +26,7 @@
 </script>
 
 <style scoped>
-    .wrapper {
+    .m-wrapper {
         text-align: center;
     }
 

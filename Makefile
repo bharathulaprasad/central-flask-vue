@@ -7,5 +7,5 @@ docker-build:
 run-server:
 	python app.py
 
-serve-ui:
+run-ui:
 	cd central-ui && npm run serve

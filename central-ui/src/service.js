@@ -1,6 +1,9 @@
 import axios from "axios";
 
+console.log(process.env.NODE_ENV);
+
 export const session = axios.create({
+  baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:5000/api/v1' : '/api/v1',
   withCredentials: false,
   headers: {
     'Accept': 'application/json',
@@ -11,13 +14,9 @@ export const session = axios.create({
 export default {
   getApplications() {
     return session.get('/applications/');
-    // const data = [
-    //   {
-    //     'name': 'Material Notes',
-    //     'logo': 'https://cookicons.co/images/app-icons/materialnotes.png',
-    //     'url': 'https://play.google.com/store/apps/details?id=com.dinosaur.cwfei.materialnotes'
-    //   }
-    // ];
-    // return new Promise((resolve, reject) => resolve({data}));
+  },
+  createApplication(payload) {
+    // payload => {name, logo, url}
+    return session.post('/create/', payload);
   },
 };
